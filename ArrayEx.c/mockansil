@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int l1=-2000,l2=-3000,del;
+    int i,j,n=5,temp,sum=0;
+    int a[5]={28,40,30,5,4};
+     for(i=0,j=n-1;i<n/2;i++,j--){
+         temp=a[i];
+         a[i]=a[j];
+         a[j]=temp;
+     }printf("reversed parray :");
+     for(i=0;i<n;i++){
+         printf("%d\t",a[i]);
+     }for(i=0;i<n;i++){
+         sum=sum+a[i];
+     }printf("\nsum of the array :%d",sum);
+     if(sum>100){
+       for(i=0;i<n;i++){
+           if(a[i]>l1){
+               l2=l1;
+               l1=a[i];
+           }else if(a[i]>l2&&a[i]<l1){
+           l2=a[i];
+           } 
+       }printf("\nseconf largest element is :%d",l2);
+        del=l2;
+        for(i=0;i<n;i++){
+               if(a[i]==del){
+               for(j=i;j<n;j++){
+                   a[i]=a[i+1];
+               }n--;
+               }
+        }
+       printf("\nelememt without second largest");
+       for(i=0;i<n;i++){
+           printf("%d\t",a[i]);
+}
+}
+}

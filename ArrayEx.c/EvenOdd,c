@@ -1,0 +1,22 @@
+    #include<stdio.h>
+    int main(){
+        int i,a[100],size,Ev[50],od[50],E,O;
+        printf("Enter the size of array");
+        scanf("%d",&size);
+        printf("Enter the values");
+        for(i=0;i<size;i++){
+            scanf("%d",&a[i]);
+        }for(i=0;i<=size;i++){
+            if(a[i]%2==0){
+                Ev[i]=a[i];
+               E++;
+            }else{
+                od[i]=a[i];
+              O++;
+            }
+            }for(i=0;i<E;i++){
+                printf("%d",Ev[i]);
+            }for(i=0;i<O;i++){
+                printf("%d",od[i]);
+            }
+    }
